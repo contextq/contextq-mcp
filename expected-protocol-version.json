@@ -1,0 +1,4 @@
+{
+  "_comment": "T607: the MCP protocol version this package is built/tested against. Bumping this value is a DELIBERATE act, not something to do reflexively to silence check:protocol -- read scripts/check-protocol-version.ts's header before changing it. It must be updated in the SAME commit that upgrades @modelcontextprotocol/sdk to a version whose LATEST_PROTOCOL_VERSION differs, after confirming the tool/transport code here still speaks that version correctly.",
+  "protocolVersion": "2025-11-25"
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.contextq/contextq-mcp",
+  "description": "Persistent memory, hybrid search and a goal graph for AI agents, over stdio or remote HTTP.",
+  "websiteUrl": "https://contextq.dev",
+  "version": "2.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@contextq/mcp",
+      "version": "2.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CONTEXT_API_KEY",
+          "description": "ContextQ API key (sk_live_...), created in the ContextQ dashboard",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "CONTEXT_API_URL",
+          "description": "ContextQ API base URL, https://app.contextq.dev for the hosted service",
+          "isRequired": true
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.contextq.dev/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer followed by a ContextQ API key (sk_live_...)",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

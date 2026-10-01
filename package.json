@@ -1,0 +1,48 @@
+{
+  "name": "@contextq/mcp",
+  "version": "2.1.0",
+  "mcpName": "io.github.contextq/contextq-mcp",
+  "description": "MCP server for ContextQ — exposes the full ContextQ knowledge-management API as Model Context Protocol tools",
+  "type": "module",
+  "bin": {
+    "contextq-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc --noEmit && tsup",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
+    "audit-tokens": "tsx scripts/audit-tool-tokens.ts",
+    "test": "tsx --test 'src/**/*.test.ts'",
+    "check:protocol": "tsx scripts/check-protocol-version.ts"
+  },
+  "keywords": [
+    "mcp",
+    "contextq",
+    "model-context-protocol",
+    "knowledge-management",
+    "ai-agents"
+  ],
+  "license": "MIT",
+  "homepage": "https://contextq.dev",
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.12",
+    "typescript": "^5.8.3"
+  }
+}
