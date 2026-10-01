@@ -3,12 +3,12 @@
   "name": "io.github.contextq/contextq-mcp",
   "description": "Persistent memory, hybrid search and a goal graph for AI agents, over stdio or remote HTTP.",
   "websiteUrl": "https://contextq.dev",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@contextq/mcp",
-      "version": "2.1.0",
+      "version": "2.1.1",
       "transport": {
         "type": "stdio"
       },
@@ -34,11 +34,15 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Bearer followed by a ContextQ API key (sk_live_...)",
-          "isRequired": true,
+          "description": "Optional: Bearer followed by a ContextQ API key (sk_live_...). Omit to sign in with OAuth.",
+          "isRequired": false,
           "isSecret": true
         }
       ]
     }
-  ]
+  ],
+  "repository": {
+    "url": "https://github.com/contextq/contextq-mcp",
+    "source": "github"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@contextq/mcp",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "mcpName": "io.github.contextq/contextq-mcp",
   "description": "MCP server for ContextQ — exposes the full ContextQ knowledge-management API as Model Context Protocol tools",
   "type": "module",
@@ -44,5 +44,9 @@
     "tsup": "^8.5.1",
     "tsx": "^4.23.12",
     "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contextq/contextq-mcp.git"
   }
 }

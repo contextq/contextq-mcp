@@ -147,7 +147,7 @@ async function handshake(baseUrl: string): Promise<void> {
 
 const server = new Server(
   {
-    name: "shared-context",
+    name: "contextq",
     version: MCP_VERSION,
   },
   {
